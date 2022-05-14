@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <div class="page-body">
     <header class="main-header">
       <a class="main-header__logo" href="index.html" aria-label="Ссылка на главную страницу">
         <img src="img/logo-header-sedona.svg" width="185" height="96" alt="Логотип Седона">
@@ -39,96 +41,96 @@
         </div>
         <h1 class="review__title">Оставьте свой отзыв</h1>
         <p class="review__text">Помогите нашим отелям стать лучше! <br> оставьте отзыв о них, а также о <br> посещенных вами <br> достопримечательностях </p>
-        <form class="feedback" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="feedback__author">
-            <legend class="feedback__author-title">Представьтесь:</legend>
-            <ul class="feedback__author-list">
-              <li class="feedback__author-item author">
-                <label class="author__label">Имя*:</label>
-                <input class="author__input" type="text" id="name" name="name" placeholder="Пётр">
+        <form class="filters" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset class="filters__fieldset">
+            <legend class="filters__legend">Представьтесь:</legend>
+            <ul class="filters__list">
+              <li class="filters__item">
+                <label class="filters__label">Имя*:</label>
+                <input class="filters__input" type="text" id="name" name="name" placeholder="Пётр">
               </li>
-              <li class="feedback__author-item author">
-                <label class="author__label">Фамилия*:</label>
-                <input class="author__input" type="text" id="surname" name="surname" placeholder="Пустота">
+              <li class="filters-item">
+                <label class="filters__label">Фамилия*:</label>
+                <input class="filters__input" type="text" id="surname" name="surname" placeholder="Пустота">
               </li>
-              <li class="feedback__author-item author">
-                <label class="author__label">Отчество:</label>
-                <input class="author__input" type="text" id="patronymic" name="patronymic" placeholder="Викторович">
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="feedback__contacts">
-            <legend class="feedback__contacts-title">Контактная информация:</legend>
-            <ul class="feedback__contacts-list">
-              <li class="feedback__contacts-item contacts">
-                <label class="contacts__label">Контактный телефон*:</label>
-                <input class="contacts__input" type="tel" id="telephone" name="telephone" placeholder="Введите телефон">
-              </li>
-              <li class="feedback__contacts-item contacts">
-                <label class="contacts__label">Электронная почта*:</label>
-                <input class="contacts__input" type="email" id="email" name="email" placeholder="Введите e-mail">
+              <li class="filters-item">
+                <label class="filters__label">Отчество:</label>
+                <input class="filters__input" type="text" id="patronymic" name="patronymic" placeholder="Викторович">
               </li>
             </ul>
           </fieldset>
-          <fieldset class="feedback__impression">
-            <legend class="feedback__impression-title">Ваше общее впечатление:</legend>
-            <ul class="feedback__impression-list">
-              <li class="feedback__impression-item toggle">
-                <label class="toggle__label">
-                  <input class="toggle__input" type="radio" name="impression" value="positively">
-                  <span class="toggle__text">Скорее положительное</span>
-                </label>
+          <fieldset class="filters__fieldset">
+            <legend class="filters__legend">Контактная информация:</legend>
+            <ul class="filters__list">
+              <li class="filters__item">
+                <label class="filters__label">Контактный телефон*:</label>
+                <input class="filters__input" type="tel" id="telephone" name="telephone" placeholder="Введите телефон">
               </li>
-              <li class="feedback__impression-item toggle">
-                <label class="toggle__label">
-                  <input class="toggle__input" type="radio" name="impression" value="negative">
-                  <span class="toggle__text">Скорее отрицательное</span>
-                </label>
-              </li>
-              <li class="feedback__impression-item toggle">
-                <label class="toggle__label">
-                  <input class="toggle__input" type="radio" name="impression" value="neutral">
-                  <span class="toggle__text">Затрудняюсь ответить</span>
-                </label>
-            </ul>
-          </fieldset>
-          <fieldset class="feedback__attraction">
-            <legend class="feedback__attraction-title">Посещенные <br> достопримечательности: </legend>
-            <ul class="feedback__attraction-list">
-              <li class="feedback__attraction-item control">
-                <label class="control__label">
-                  <input class="control__input" type="checkbox" name="devil-bridge">
-                  <span class="control__text">Мост Дьявола</span>
-                </label>
-              </li>
-              <li class="feedback__attraction-item control">
-                <label class="control__label">
-                  <input class="control__input" type="checkbox" name="mount-bell">
-                  <span class="control__text">Гора-Колокол</span>
-                </label>
-              </li>
-              <li class="feedback__attraction-item control">
-                <label class="control__label">
-                  <input class="control__input" type="checkbox" name="slide-park">
-                  <span class="control__text">Слайд-парк</span>
-                </label>
-              </li>
-              <li class="feedback__attraction-item control">
-                <label class="control__label">
-                  <input class="control__input" type="checkbox" name="red-rocks">
-                  <span class="control__text">Красные скалы</span>
-                </label>
+              <li class="filters-item">
+                <label class="filters__label">Электронная почта*:</label>
+                <input class="filters__input" type="email" id="email" name="email" placeholder="Введите e-mail">
               </li>
             </ul>
           </fieldset>
-          <fieldset class="feedback__section">
-            <legend class="feedback__section-title">Опишите свои эмоции:</legend>
-            <div class="textbox">
+          <fieldset class="filters__fieldset">
+            <legend class="filters__legend">Ваше общее впечатление:</legend>
+            <ul class="filters__list">
+              <li class="filters__item">
+                <label class="filters__impression">
+                  <input class="filters__input" type="radio" name="impression" value="positively">
+                  <span class="filters__text">Скорее положительное</span>
+                </label>
+              </li>
+              <li class="filters-item">
+                <label class="filters__impression">
+                  <input class="filters__input" type="radio" name="impression" value="negative">
+                  <span class="filters__text">Скорее отрицательное</span>
+                </label>
+              </li>
+              <li class="filters-item">
+                <label class="filters__impression">
+                  <input class="filters__input" type="radio" name="impression" value="neutral">
+                  <span class="filters__text">Затрудняюсь ответить</span>
+                </label>
+            </ul>
+          </fieldset>
+          <fieldset class="filters__fieldset">
+            <legend class="filters__legend">Посещенные <br> достопримечательности: </legend>
+            <ul class="filters__list">
+              <li class="filters__item">
+                <label class="filters__visited">
+                  <input class="filters__input" type="checkbox" name="devil-bridge">
+                  <span class="filters__text">Мост Дьявола</span>
+                </label>
+              </li>
+              <li class="filters-item">
+                <label class="filters__visited">
+                  <input class="filters__input" type="checkbox" name="mount-bell">
+                  <span class="filters__text">Гора-Колокол</span>
+                </label>
+              </li>
+              <li class="filters-item">
+                <label class="filters__visited">
+                  <input class="filters__input" type="checkbox" name="slide-park">
+                  <span class="filters__text">Слайд-парк</span>
+                </label>
+              </li>
+              <li class="filters-item">
+                <label class="filters__visited">
+                  <input class="filters__input" type="checkbox" name="red-rocks">
+                  <span class="filters__text">Красные скалы</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filters__fieldset">
+            <legend class="filters__legend">Опишите свои эмоции:</legend>
+            <div class="filters__textbox">
               <textarea class="textbox__text" id="text" name="text" placeholder="Опишите подробно все свои восторги"></textarea>
             </div>
           </fieldset>
-          <button class="feedback__button" type="submit">Отправить отзыв</button>
-          <p class="feedback__text">* — обязательные поля</p>
+          <button class="filters__button" type="submit">Отправить отзыв</button>
+          <p class="filters__text-important">* — обязательные поля</p>
         </form>
       </section>
     </main>
@@ -164,6 +166,7 @@
       <p class="modal-success__title">Ваш отзыв отправлен!</p>
       <p class="modal-success__text">Спасибо за ваше участие, ваш <br> отзыв уже поступил к нам. <br>В ближайшее время мы <br> опубликуем его на сайте. </p>
       <button class="modal-success__button" type="button">Закрыть окно</button>
+    </div>
     </div>
   </body>
 </html>

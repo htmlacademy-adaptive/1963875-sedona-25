@@ -1,1 +1,39 @@
-// Начните писать стили здесь
+@use "variables.scss";
+@use "page-body.scss";
+@use "main-header.scss";
+@use "site-list.scss";
+@use "main-nav.scss";
+@use "intro.scss";
+@use "advantages.scss";
+@use "additions-list.scss";
+@use "search-hotel.scss";
+@use "main-footer.scss";
+@use "copyright.scss";
+@use "photos.scss";
+@use "photo.scss";
+@use "video.scss";
+@use "review.scss";
+@use "filters.scss";
+@use "modal-failure.scss";
+@use "modal-success.scss";
+@use "additions-item.scss";
+@use "textbox.scss";
+@use "social.scss";
+@use "fonts.scss";
+
+body {
+  font-family: "PT Sans", Arial, sans-serif;
+  background-color: #E7E5E5;
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
