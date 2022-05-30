@@ -2,3 +2,20 @@
   margin: 0;
   padding: 0;
 }
+
+@media (min-width: $tablet-width) {
+  .main-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 768px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+  }
+}
